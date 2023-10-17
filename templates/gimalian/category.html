@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for cat in category %}
+<h1>Категория: {{ cat }}</h1>
+{% endfor %}
+
+{% for item in post %}
+<p><a href="{{ item.get_absolute_url }}">{{ item.title }}</a></p>
+{% endfor %}
+{% endblock %}

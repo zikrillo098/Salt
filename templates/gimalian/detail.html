@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}{{ post.title }}{% endblock title %}
+{% block content %}
+<h2>{{ post.title }}</h2>
+<p>{{ post.body }}</p>
+<p>{{ post.created }}</p>
+<p><i>{{ post.updated }}</i></p>
+
+<p><a href="{% url 'gimalian:email_share' post.id %}">Отправить пост с помошью Gmail</a></p>
+{% endblock content  %}
